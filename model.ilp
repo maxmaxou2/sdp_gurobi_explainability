@@ -1,17 +1,16 @@
-\ Model Explanation_1_m_copy
+\ Model Explanation_m_1_copy
 \ LP format - for model browsing. Use MPS format to capture full model detail.
-\ Signature: 0xafadc5e61dd5d5a7
+\ Signature: 0x2356aa38d4400ae0
 Minimize
  
 Subject To
- cover_B: match_A_B + match_C_B + match_E_B = 1
- cover_D: match_A_D + match_C_D + match_E_D = 1
- cover_F: match_A_F + match_C_F + match_E_F = 1
- strength_A: - 49 match_A_B - 42 match_A_D - 65 match_A_F >= -8
- strength_C: - 49 match_C_B - 42 match_C_D - 65 match_C_F >= -84
- strength_E: - 49 match_E_B - 42 match_E_D - 65 match_E_F >= -72
+ pro_disjoint_B: match_B_C + match_B_D + match_B_E <= 1
+ pro_disjoint_F: match_F_C + match_F_D + match_F_E <= 1
+ strength_C: 126 match_B_C + 40 match_F_C + 36 match_G_C >= 70
+ strength_D: 126 match_B_D + 40 match_F_D + 36 match_G_D >= 60
+ strength_E: 126 match_B_E + 40 match_F_E + 36 match_G_E >= 54
 Bounds
 Binaries
- match_A_B match_A_D match_A_F match_C_B match_C_D match_C_F match_E_B
- match_E_D match_E_F
+ match_B_C match_B_D match_B_E match_F_C match_F_D match_F_E match_G_C
+ match_G_D match_G_E
 End
