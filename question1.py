@@ -59,7 +59,7 @@ try:
 
     # Objective: Just find a feasible solution. 
     # (Gurobi will try to satisfy constraints. If impossible, it returns Infeasible)
-    m.setObjective(0, GRB.CONSTANT)
+    m.setObjective(0, GRB.MINIMIZE)
 
     # Optimize
     m.optimize()
@@ -81,5 +81,5 @@ try:
 except gp.GurobiError as e:
     print(f"Error code {e.errno}: {e}")
 
-except AttributeError:
+except AttributeError as e:
     print("Encountered an attribute error")
