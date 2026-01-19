@@ -22,8 +22,8 @@ grades = {
     'w_prime': {"A": 57, "B": 76, "C": 81, "D": 76, "E": 82, "F": 86, "G": 77},
 }
 
-candidate_1 = 'u'
-candidate_2 = 'v'
+candidate_1 = 'z'
+candidate_2 = 't'
 
 grades_1 = grades[candidate_1]
 grades_2 = grades[candidate_2]
